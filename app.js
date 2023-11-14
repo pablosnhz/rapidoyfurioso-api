@@ -8,9 +8,29 @@ const options = {
 };
 
 try {
-	const response = await fetch(url, options);
-	const arrayMovies = await response.json();
-	console.log(arrayMovies);
+    const response = await fetch(url, options);
+    const datos = await response.json();
+
+	const arrayMovies = datos.d;
+
+    arrayMovies.map(( element ) => {
+        // console.log(element)
+        const title = element.l;
+        const image = element.i.imageUrl;
+        const cast  = element.s
+
+        const poster = `
+            <div>
+                <img src="${image}">
+                <h2>${title}</h2>
+                <small>${cast}</small>
+            </div>
+        `
+        document.getElementById('container').innerHTML += poster
+        console.log(cast)
+    })
+
+	// console.log(datos);
 } catch (error) {
 	console.error(error);
 }
