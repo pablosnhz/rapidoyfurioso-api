@@ -14,7 +14,7 @@ h1 {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
-    margin: 30px 0 60px;
+    margin: 30px 0 10px;
 }
 
 #container {
@@ -57,11 +57,35 @@ h2 {
     #container {
       grid-template-columns: repeat(3, 1fr); 
     }
+    #container div {
+        font-size: 12px;
+    }
+    #container div img {
+        /* width: 100%;
+        height: auto; */
+        max-width: 150px;
+        height: 230px;
+    }
+    #container div img:hover {
+        transform: none;
+    }
   }
   
   
   @media (max-width: 480px) {
     #container {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #container div {
+        font-size: 12px;
+    }
+    #container div img {
+        /* width: 100%;
+        height: auto; */
+        max-width: 150px;
+        height: 230px;
+    }
+    #container div img:hover {
+        transform: none;
     }
   }
