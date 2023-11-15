@@ -27,7 +27,7 @@ try {
             </div>
         `
         document.getElementById('container').innerHTML += poster
-        console.log(cast)
+        // console.log(cast)
     })
 
 	// console.log(datos);

@@ -4,6 +4,9 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #303237;
     color: #fff;
+    display: grid;
+    place-items: center;
+    height: 100vh; 
 }   
 
 h1 {
@@ -11,12 +14,15 @@ h1 {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+    margin: 30px 0 60px;
 }
 
 #container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px;
 }
 
 #container div {
@@ -46,3 +52,16 @@ h2 {
     margin-bottom: 10px;
     margin-top: auto;
 }
+
+@media (max-width: 768px) {
+    #container {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    #container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
